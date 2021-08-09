@@ -12,6 +12,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.chaoxing.mynode.domain.NoteItem;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -148,13 +151,13 @@ public class NoteListActivity extends AppCompatActivity {
 
 
             //设置头像
-//            Glide.with(NoteListActivity.this)
-//                    .load(avatarUrl)
-////                        .placeholder(R.drawable.loading)
-////                        .error(R.drawable.error)
-//                    .diskCacheStrategy(DiskCacheStrategy.NONE)
-//                    .override(100, 100)
-//                    .into(img_icon_avatar);
+            Glide.with(NoteListActivity.this)
+                    .load(avatarUrl)
+//                        .placeholder(R.drawable.loading)
+//                        .error(R.drawable.error)
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                    .override(100, 100)
+                    .into(img_icon_avatar);
 
             //设置笔记
             tv_username.setText(noteList.get(position).getUsername());
@@ -185,13 +188,13 @@ public class NoteListActivity extends AppCompatActivity {
                 ImageView imageView = new ImageView(getApplicationContext());
 
 
-//                Glide.with(NoteListActivity.this)
-//                        .load(noteList.get(position).getPicUrls()[0])
-////                        .placeholder(R.drawable.loading)
-////                        .error(R.drawable.error)
-//                        .diskCacheStrategy(DiskCacheStrategy.NONE)
-//                        .override(100, 100)
-//                        .into(imageView);
+                Glide.with(NoteListActivity.this)
+                        .load(noteList.get(position).getPicUrls()[0])
+//                        .placeholder(R.drawable.loading)
+//                        .error(R.drawable.error)
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .override(100, 100)
+                        .into(imageView);
 
 //                imageView.setImageResource(R.drawable.icon_folder);
                 imageView.setPadding(2, 2, 3, 2);
@@ -214,13 +217,13 @@ public class NoteListActivity extends AppCompatActivity {
                     ImageView imageView = new ImageView(getApplicationContext());
 
 
-//                    Glide.with(NoteListActivity.this)
-//                            .load(noteList.get(position).getPicUrls()[i])
-////                        .placeholder(R.drawable.loading)
-////                        .error(R.drawable.error)
-//                            .diskCacheStrategy(DiskCacheStrategy.NONE)
-//                            .override(100, 100)
-//                            .into(imageView);
+                    Glide.with(NoteListActivity.this)
+                            .load(noteList.get(position).getPicUrls()[i])
+//                        .placeholder(R.drawable.loading)
+//                        .error(R.drawable.error)
+                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                            .override(100, 100)
+                            .into(imageView);
 
 //                    imageView.setImageResource(R.drawable.icon_folder);
                     imageView.setPadding(2, 2, 3, 2);
@@ -238,13 +241,13 @@ public class NoteListActivity extends AppCompatActivity {
                 for (int i = 0; i < picCount; i++) {
                     ImageView imageView = new ImageView(getApplicationContext());
 
-//                    Glide.with(NoteListActivity.this)
-//                            .load(noteList.get(position).getPicUrls()[0])
-////                        .placeholder(R.drawable.loading)
-////                        .error(R.drawable.error)
-//                            .diskCacheStrategy(DiskCacheStrategy.NONE)
-//                            .override(100, 100)
-//                            .into(imageView);
+                    Glide.with(NoteListActivity.this)
+                            .load(noteList.get(position).getPicUrls()[0])
+//                        .placeholder(R.drawable.loading)
+//                        .error(R.drawable.error)
+                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                            .override(100, 100)
+                            .into(imageView);
 
                     imageView.setPadding(2, 2, 3, 2);
 
